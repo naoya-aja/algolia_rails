@@ -7,5 +7,6 @@ class Product < ApplicationRecord
   algoliasearch do
     attributes :title, :content, :label, :price # 登録したいカラム
     searchableAttributes ['label', 'title', 'content']
+    attributesForFaceting [:label]
   end
 end
